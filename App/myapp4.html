@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="elements">
+    <script>
+
+
+       //let divElement=()=>{
+        function divElement(){
+              let elements=document.getElementById("elements")
+              console.log(elements)
+
+
+       let childDiv=document.createElement("div")
+       let childpara=document.createElement("p");
+       childpara.textContent="dhfjfhhgrjtjhhjgtjhdrgh";
+       //console.log(childpara)
+       childDiv.appendChild(childpara);
+       elements.appendChild(childDiv)
+       //elements.setAttribute("id","container");
+
+       //let div= document.getElementById("container")
+       //for div class print this...
+       elements.setAttribute("class","container");
+       let div= document.getElementsByClassName("container")
+       div[0].style.width="30%";
+       div[0].style.margin="2%";
+       div[0].style.padding="2%";
+       div[0].style.border="3px solid green";
+       div[0].style.borderRadius="10px";
+       }
+       let cleardata=setInterval(()=>{
+        divElement();
+    },2000)
+    setTimeout(()=>{
+        clearInterval(cleardata)
+    },20000)
+  
+    </script>
+</body>
+</html>
+
+<!--diff btwn id and class 
+"id" is always unique,it has an ability to interact with the url
+and class it can be accessible anywhere-->

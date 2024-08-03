@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>     //"await" is the advanced version of "Promise"
+        let asyncFun=()=>{
+            return new Promise((resolve,reject)=>{
+                if(true){
+                    resolve("resolve is execute...")
+                }
+                else{
+                    reject("Error is happened")
+                }
+            })
+        }
+        async function prepareData(){
+           try{
+               await asyncFun().then(()=>{
+                 setTimeout(()=>{
+                    document.writeln("<h1>async & await </h1>")
+                 },2000)
+               });
+           }
+           catch(Error){
+               document.writeln("<h1>"+Error+"</h1>")
+           }
+           finally{
+               document.writeln("finally is printing")
+           }
+
+        }
+        prepareData().then(()=>{
+            setTimeout(()=>{
+                document.writeln("I am Last")
+            },4000)
+        })
+
+
+
+        //let fetchApi=fetch("./url")
+        //console.log(fetchApi)
+    </script>
+</body>
+</html>

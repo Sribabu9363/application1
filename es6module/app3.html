@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let CakeDetails={
+                cakeFlvr:["Blackforest","Whiteforest","Redvelvet","Blackcurrant"],
+                Ingredients:['chocolate','vanilla','rasberry','blueberry'],
+                statusin:['inprogress','completed','designing','prepared'],
+                design:['square','circle','rectangle','semisphere']
+             }
+
+          let processingStatus=true;
+        let fetchData=()=>{
+            return new Promise((resolve,reject)=>{
+              if(processingStatus){
+                resolve("The cake shop is now open..");
+              }
+              else{
+                reject("Cake shop is closed..");
+              }
+            })
+        }
+        fetchData().then(()=>{
+
+setTimeout(()=>{
+    document.writeln("<h1>The workers are ready to prepare cake</h1>")
+},2000)
+}).then(()=>{
+setTimeout(()=>{
+    document.writeln("<h1>The task is assigned for the worker to prepare cake</h1>")
+},4000)
+}).then(()=>{
+setTimeout(()=>{
+    document.writeln("<h1>They started working to prepare the required cake</h1>")
+},6000)
+}).then(()=>{
+    setTimeout(()=>{
+        document.writeln(`<h1>${CakeDetails.cakeFlvr[0]} is made using ${CakeDetails.Ingredients[0]} and the work status is ${CakeDetails.statusin[0]} which is ${CakeDetails.design[0]}</h1>`)
+    },6000)
+}).then(()=>{
+    setTimeout(()=>{
+        document.writeln(`<h1>${CakeDetails.cakeFlvr[1]} is made using ${CakeDetails.Ingredients[1]} and the work status is ${CakeDetails.statusin[1]} which is ${CakeDetails.design[1]} </h1>`)
+    },6000)
+}).then(()=>{
+    setTimeout(()=>{
+        document.writeln(`<h1>${CakeDetails.cakeFlvr[2]} is made using ${CakeDetails.Ingredients[2]} and the work status is ${CakeDetails.statusin[3]} which is ${CakeDetails.design[3]}</h1>`)
+    //},6000)
+    },6000)
+}).then(()=>{
+    setTimeout(()=>{
+        document.writeln("<h1>Your order is completed</h1>")
+    },8000)
+}).catch(()=>{
+    setTimeout(()=>{
+        document.writeln("<h1>Today is sunday so shop is closed</h1>")
+    },2000)
+}).finally(()=>{
+    setTimeout(()=>{
+        document.writeln("<h1>The Shop is closed</h1>")
+    },10000)
+})
+</script>
+</body>
+</html>
+   

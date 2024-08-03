@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.writeln("<h1>The content is loading...")
+            let time;
+            
+
+
+            function emp_checkin(){
+                console.log("Employee check in")
+            }
+            function emp_working_status(callbackfun){
+                callbackfun();
+                console.log("the employee start to work")
+            }
+            emp_working_status(emp_checkin)
+            new Promise(resolve,reject).then().catch().finally()
+            //temp.then()
+            /**let getData=()=>{
+                console.log("Arrow function")
+                //callbackfunction,millisecond
+                setTimeout(()=>{
+                    clearInterval(fun1)
+                   document.writeln("<h1>It will execute after some times</h1>")
+                },2000)
+            }
+            let fun1=()=>{
+               setInterval(()=>{
+                  document.writeln("<h1>keep on executing..</h1>")
+               },6000)
+            }
+            getData();*/
+            //clearInterval()
+            //fun1();
+        //setTimeout
+
+        /**try{
+          let i=0;
+          //let values=100/0
+          console.log("try block")
+          //error
+        }catch(Error){
+          console.log("catch block: "+Error)
+          //handle error
+        }finally{
+           console.log("final block")
+           //clearing stmt
+        }*/time
+    </script>
+</body>
+</html>

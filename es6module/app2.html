@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+             let EmployeeDetails={
+                namelist:["siva","saran","raj","vicky"],
+                resposibility:['developing','testing','rewining','finalizing'],
+                statusis:['inprogress','completed','started','waiting']
+             }
+
+          let workingStatus=true;
+        let fetchData=()=>{
+
+          return new Promise((resolve,reject)=>{
+              if(workingStatus){
+                resolve("The Employees are reaced office..");
+              }
+              else{
+                reject("Today is not working..");
+              }
+            })
+        }
+        fetchData().then(()=>{
+
+            setTimeout(()=>{
+                document.writeln("<h1>They are ready for work</h1>")
+            },2000)
+           }).then(()=>{
+            setTimeout(()=>{
+                document.writeln("<h1>the work is assigned for the employees</h1>")
+            },4000)
+            }).then(()=>{
+            setTimeout(()=>{
+                document.writeln("<h1>The employees are started to working</h1>")
+            },6000)
+        }).then(()=>{
+                setTimeout(()=>{
+                    document.writeln(`<h1>${EmployeeDetails.namelist[0]} is doing ${EmployeeDetails.resposibility[0]} the work status is ${EmployeeDetails.statusis[0]}</h1>`)
+                },6000)
+            }).then(()=>{
+                setTimeout(()=>{
+                    document.writeln(`<h1>${EmployeeDetails.namelist[1]} is doing ${EmployeeDetails.resposibility[1]} the work status is ${EmployeeDetails.statusis[1]}</h1>`)
+                },6000)
+            }).then(()=>{
+                setTimeout(()=>{
+                    document.writeln(`<h1>${EmployeeDetails.namelist[2]} is doing ${EmployeeDetails.resposibility[2,3]} the work status is ${EmployeeDetails.statusis[2]}</h1>`)
+                //},6000)
+                },6000)
+            }).then(()=>{
+                setTimeout(()=>{
+                    document.writeln("<h1>the work is finished</h1>")
+                },8000)
+            }).catch(()=>{
+                setTimeout(()=>{
+                    document.writeln("<h1>Today is sunday office is closed</h1>")
+                },2000)
+            }).finally(()=>{
+                setTimeout(()=>{
+                    document.writeln("<h1>The office is closed</h1>")
+                },10000)
+            })
+    </script>
+</body>
+</html>
